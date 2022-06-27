@@ -1,18 +1,15 @@
 const express = require("express");
 const { readFileSync, writeFileSync } = require("fs");
+const path = require("path");
 const config = require("./config.json");
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const form = readFileSync("./form.html", { encoding: "utf8" });
-const success = readFileSync("./success.html", { encoding: "utf8" });
-const error = readFileSync("./error.html", { encoding: "utf8" });
-
 // 1. Have the user navigate to this path
 app.get("/", (req, res) => {
-  res.send(form);
+  res.sendFile("form.html", { root: __dirname });
 });
 
 // 2. The user will check the scopes they want to give to your app
@@ -35,9 +32,9 @@ app.get("/authorize", async (req, res) => {
     console.log("Response from Twitch:");
     console.log(req.query);
 
-    if (req.query.error) return res.send(error);
+    if (req.query.error) return res.sendFile("error.html", { root: __dirname });
 
-    res.send(success);
+    res.sendFile("success.html", { root: __dirname });
 
     // Had to include this annoying check so my linter would stop yelling at me
     if (typeof req.query.code != "string") return;
