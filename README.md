@@ -26,7 +26,7 @@ nano config.json
 ```
 
   - Make sure that `express.port` is a port that is reachable from your `twitch.redirectURI`. (*hint hint: nginx config*)
-  - Your `twitch.redirectURI` should have a `/authorize` path (e.g. `https://example.com/authorize`). If you need to adjust the path because of conflict with your existing system, make sure you also change `server.js:33` accordingly.
+  - Your `twitch.redirectURI` should have a `/authorize` path (e.g. `https://example.com/authorize`). If you need to adjust the path because of conflict with your existing system, make sure you also change `server.js:30` accordingly.
   
   ```diff
   - app.get("/authorize", async (req, res) => {
