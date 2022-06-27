@@ -1,0 +1,10 @@
+{
+  "twitch": {
+    "clientId": "",
+    "clientSecret": "",
+    "redirectURI":""
+  },
+  "express": {
+    "port": ""
+  }
+}

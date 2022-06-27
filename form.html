@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<head>
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/purecss@2.1.0/build/pure-min.css"
+    integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH"
+    crossorigin="anonymous"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    #form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+<html>
+  <body>
+    <form id="form" action="/submit" method="post" target="_blank" class="pure-form pure-form-aligned">
+      <fieldset>
+        <legend>Twitch API scopes</legend>
+        <div class="pure-controls">
+          <label for="analytics:read:extensions" class="pure-checkbox">
+            <input type="checkbox" id="analytics:read:extensions" name="analytics:read:extensions" /> analytics:read:extensions
+          </label>
+          <label for="analytics:read:games" class="pure-checkbox">
+            <input type="checkbox" id="analytics:read:games" name="analytics:read:games" /> analytics:read:games
+          </label>
+          <label for="bits:read" class="pure-checkbox">
+            <input type="checkbox" id="bits:read" name="bits:read" /> bits:read
+          </label>
+          <label for="channel:edit:commercial" class="pure-checkbox">
+            <input type="checkbox" id="channel:edit:commercial" name="channel:edit:commercial" /> channel:edit:commercial
+          </label>
+          <label for="channel:manage:broadcast" class="pure-checkbox">
+            <input type="checkbox" id="channel:manage:broadcast" name="channel:manage:broadcast" /> channel:manage:broadcast
+          </label>
+          <label for="channel:manage:extensions" class="pure-checkbox">
+            <input type="checkbox" id="channel:manage:extensions" name="channel:manage:extensions" /> channel:manage:extensions
+          </label>
+          <label for="channel:manage:polls" class="pure-checkbox">
+            <input type="checkbox" id="channel:manage:polls" name="channel:manage:polls" /> channel:manage:polls
+          </label>
+          <label for="channel:manage:predictions" class="pure-checkbox">
+            <input type="checkbox" id="channel:manage:predictions" name="channel:manage:predictions" /> channel:manage:predictions
+          </label>
+          <label for="channel:manage:raids" class="pure-checkbox">
+            <input type="checkbox" id="channel:manage:raids" name="channel:manage:raids" /> channel:manage:raids
+          </label>
+          <label for="channel:manage:redemptions" class="pure-checkbox">
+            <input type="checkbox" id="channel:manage:redemptions" name="channel:manage:redemptions" /> channel:manage:redemptions
+          </label>
+          <label for="channel:manage:schedule" class="pure-checkbox">
+            <input type="checkbox" id="channel:manage:schedule" name="channel:manage:schedule" /> channel:manage:schedule
+          </label>
+          <label for="channel:manage:videos" class="pure-checkbox">
+            <input type="checkbox" id="channel:manage:videos" name="channel:manage:videos" /> channel:manage:videos
+          </label>
+          <label for="channel:read:editors" class="pure-checkbox">
+            <input type="checkbox" id="channel:read:editors" name="channel:read:editors" /> channel:read:editors
+          </label>
+          <label for="channel:read:goals" class="pure-checkbox">
+            <input type="checkbox" id="channel:read:goals" name="channel:read:goals" /> channel:read:goals
+          </label>
+          <label for="channel:read:hype_train" class="pure-checkbox">
+            <input type="checkbox" id="channel:read:hype_train" name="channel:read:hype_train" /> channel:read:hype_train
+          </label>
+          <label for="channel:read:polls" class="pure-checkbox">
+            <input type="checkbox" id="channel:read:polls" name="channel:read:polls" /> channel:read:polls
+          </label>
+          <label for="channel:read:predictions" class="pure-checkbox">
+            <input type="checkbox" id="channel:read:predictions" name="channel:read:predictions" /> channel:read:predictions
+          </label>
+          <label for="channel:read:redemptions" class="pure-checkbox">
+            <input type="checkbox" id="channel:read:redemptions" name="channel:read:redemptions" /> channel:read:redemptions
+          </label>
+          <label for="channel:read:stream_key" class="pure-checkbox">
+            <input type="checkbox" id="channel:read:stream_key" name="channel:read:stream_key" /> channel:read:stream_key
+          </label>
+          <label for="channel:read:subscriptions" class="pure-checkbox">
+            <input type="checkbox" id="channel:read:subscriptions" name="channel:read:subscriptions" /> channel:read:subscriptions
+          </label>
+          <label for="clips:edit" class="pure-checkbox">
+            <input type="checkbox" id="clips:edit" name="clips:edit" /> clips:edit
+          </label>
+          <label for="moderation:read" class="pure-checkbox">
+            <input type="checkbox" id="moderation:read" name="moderation:read" /> moderation:read
+          </label>
+          <label for="moderation:manage:banned_users" class="pure-checkbox">
+            <input type="checkbox" id="moderation:manage:banned_users" name="moderation:manage:banned_users" /> moderation:manage:banned_users
+          </label>
+          <label for="moderator:read:blocked_terms" class="pure-checkbox">
+            <input type="checkbox" id="moderator:read:blocked_terms" name="moderator:read:blocked_terms" /> moderator:read:blocked_terms
+          </label>
+          <label for="moderator:manage:blocked_terms" class="pure-checkbox">
+            <input type="checkbox" id="moderator:manage:blocked_terms" name="moderator:manage:blocked_terms" /> moderator:manage:blocked_terms
+          </label>
+          <label for="moderator:manage:automod" class="pure-checkbox">
+            <input type="checkbox" id="moderator:manage:automod" name="moderator:manage:automod" /> moderator:manage:automod
+          </label>
+          <label for="moderator:read:automod_settings" class="pure-checkbox">
+            <input type="checkbox" id="moderator:read:automod_settings" name="moderator:read:automod_settings" /> moderator:read:automod_settings
+          </label>
+          <label for="moderator:manage:automod_settings" class="pure-checkbox">
+            <input type="checkbox" id="moderator:manage:automod_settings" name="moderator:manage:automod_settings" /> moderator:manage:automod_settings
+          </label>
+          <label for="moderator:read:chat_settings" class="pure-checkbox">
+            <input type="checkbox" id="moderator:read:chat_settings" name="moderator:read:chat_settings" /> moderator:read:chat_settings
+          </label>
+          <label for="moderator:manage:chat_settings" class="pure-checkbox">
+            <input type="checkbox" id="moderator:manage:chat_settings" name="moderator:manage:chat_settings" /> moderator:manage:chat_settings
+          </label>
+          <label for="user:edit" class="pure-checkbox">
+            <input type="checkbox" id="user:edit" name="user:edit" /> user:edit
+          </label>
+          <label for="user:manage:blocked_users" class="pure-checkbox">
+            <input type="checkbox" id="user:manage:blocked_users" name="user:manage:blocked_users" /> user:manage:blocked_users
+          </label>
+          <label for="user:read:blocked_users" class="pure-checkbox">
+            <input type="checkbox" id="user:read:blocked_users" name="user:read:blocked_users" /> user:read:blocked_users
+          </label>
+          <label for="user:read:broadcast" class="pure-checkbox">
+            <input type="checkbox" id="user:read:broadcast" name="user:read:broadcast" /> user:read:broadcast
+          </label>
+          <label for="user:read:email" class="pure-checkbox">
+            <input type="checkbox" id="user:read:email" name="user:read:email" /> user:read:email
+          </label>
+          <label for="user:read:follows" class="pure-checkbox">
+            <input type="checkbox" id="user:read:follows" name="user:read:follows" /> user:read:follows
+          </label>
+          <label for="user:read:subscriptions" class="pure-checkbox">
+            <input type="checkbox" id="user:read:subscriptions" name="user:read:subscriptions" /> user:read:subscriptions
+          </label>
+          <input type="submit" value="Submit" class="pure-button pure-button-primary" />
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
